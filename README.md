@@ -1,5 +1,7 @@
 # CDC Kafka
 
+This is a CDC demo using Kafka connect and Debezium to sync CDC stream from _SQL Server_ to _db2_.
+
 ## Components
 
 - Zoo keeper
