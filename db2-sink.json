@@ -1,0 +1,19 @@
+{
+    "name": "db2-cdc-sink-connector",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "tasks.max": "1",
+        "topics": "customers",
+        "connection.url": "jdbc:db2://db2:50000/targetdb",
+        "connection.user": "db2inst1",
+        "connection.password": "db2inst1",
+        "transforms": "unwrap",
+        "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+        "transforms.unwrap.drop.tombstones": "false",
+        "insert.mode": "insert",
+        "auto.create": "true",
+        "delete.enabled": "true",
+        "pk.mode": "record_key",
+        "pk.fields": "id"
+    }
+}
